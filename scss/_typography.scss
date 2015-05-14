@@ -34,7 +34,7 @@ textarea {
 /**
  * @name Headlines
  * @level X.X.X.
- * @description
+ * @code
  *   <h1>Headline 1</h1>
  *   <h2>Headline 2</h2>
  *   <h3>Headline 3</h3>
@@ -83,7 +83,7 @@ h6 {
 /**
  * @name Anchors
  * @level X.X.X.
- * @markup
+ * @code
  *   <a href="#">readmore...</a>
  *   <span class="a">readmore...</span>
  *   <a href="#" class="a a--rev">reversed hover behaviour</a>
@@ -116,7 +116,7 @@ a,
 /**
  * @name Whitespace
  * @level X.X.X.
- * @markup
+ * @code
  *   <h2>Lorem Ipsum</h2>
  *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
  *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
