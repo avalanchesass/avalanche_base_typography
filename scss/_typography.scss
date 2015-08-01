@@ -1,14 +1,13 @@
 /**
- * @name Typography
+ * Typography
+ *
+ * Font sizes must be set in em or rem.<br>
+ * Use em values for elements and rem values for components.<br>
+ * [Chris Coyier - Font Size Idea: px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/)
+ *
  * @level X.X.
- * @description
- *   Font sizes must be set in em or rem.  
- *   Use em values for elements and rem values for components.  
- *   [Chris Coyier - Font Size Idea: px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/)
  */
-/**
- * Basic font styles
- */
+// Basic font styles
 html {
   font-size: strip-unit($font-base-size) / (16 / 100) * 1%;
   line-height: strip-unit($font-base-line-height / $font-base-size);
@@ -32,15 +31,16 @@ textarea {
 
 
 /**
- * @name Headlines
+ * Headlines
+ *
  * @level X.X.X.
- * @code
- *   <h1>Headline 1</h1>
- *   <h2>Headline 2</h2>
- *   <h3>Headline 3</h3>
- *   <h4>Headline 4</h4>
- *   <h5>Headline 5</h5>
- *   <h6>Headline 6</h6>
+ * @markup
+ * <h1>Headline 1</h1>
+ * <h2>Headline 2</h2>
+ * <h3>Headline 3</h3>
+ * <h4>Headline 4</h4>
+ * <h5>Headline 5</h5>
+ * <h6>Headline 6</h6>
  */
 h1,
 h2,
@@ -81,12 +81,13 @@ h6 {
 
 
 /**
- * @name Anchors
+ * Anchors
+ *
  * @level X.X.X.
- * @code
- *   <a href="#">readmore...</a>
- *   <span class="a">readmore...</span>
- *   <a href="#" class="a a--rev">reversed hover behaviour</a>
+ * @markup
+ * <a href="#">readmore...</a>
+ * <span class="a">readmore...</span>
+ * <a href="#" class="a a--rev">reversed hover behaviour</a>
  */
 a,
 .a {
@@ -114,19 +115,20 @@ a,
 
 
 /**
- * @name Whitespace
+ * Whitespace
+ *
  * @level X.X.X.
- * @code
- *   <h2>Lorem Ipsum</h2>
- *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
- *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
- *   <ul>
- *     <li>Lorem Ipsum dolor</li>
- *     <li>Lorem Ipsum dolor</li>
- *   </ul>
- *   <h3>Lorem Ipsum</h3>
- *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
- *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ * @markup
+ * <h2>Lorem Ipsum</h2>
+ * <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ * tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ * <ul>
+ *   <li>Lorem Ipsum dolor</li>
+ *   <li>Lorem Ipsum dolor</li>
+ * </ul>
+ * <h3>Lorem Ipsum</h3>
+ * <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ * tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
  */
 h1,
 h2,
@@ -182,9 +184,7 @@ dl {
   padding-left: 1.5em;
 }
 
-/**
- * No margin top for nested lists
- */
+// No margin top for nested lists
 li {
   ul,
   ol,
@@ -193,18 +193,14 @@ li {
   }
 }
 
-/**
- * No margin top for nested tables
- */
+// No margin top for nested tables
 table {
   table {
     margin-top: 0;
   }
 }
 
-/**
- * Normalize default font related tags
- */
+// Normalize default font related tags
 b,
 strong {
   font-weight: $font-a-weight-bold;
