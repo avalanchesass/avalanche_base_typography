@@ -1,9 +1,15 @@
 /**
  * Typography
  *
- * Font sizes must be set in em or rem.<br>
- * Use em values for elements and rem values for components.<br>
- * [Chris Coyier - Font Size Idea: px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/)
+ * Font sizes must be set in em or rem - use em values for text elements
+ * and rem values for components.<br />
+ * Read more about this from [Chris Coyier - Font Size Idea:
+ * px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/)<br />
+ * Other allowed measurement units are vw, vh and % - basically all relative
+ * units are allowed.
+ *
+ * Pixel (px) values are only allowed for hairline borders - this is because
+ * there is no other reliable way to display 1px wide lines with relative units.
  *
  * @level X.X.
  */
@@ -79,6 +85,8 @@ h6 {
   font-size: $font-size-h6;
   font-family: $font-a-family;
 }
+
+
 
 /**
  * Semantic headline classes
