@@ -225,6 +225,7 @@ blockquote {
 * + ul,
 * + ol,
 * + dl,
+* + img,
 * + pre,
 * + form,
 * + table,
@@ -265,4 +266,9 @@ strong {
 
 small {
   font-size: $font-size-s;
+}
+
+// Better img behaviour
+img {
+  display: inline-block;
 }
