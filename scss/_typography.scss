@@ -14,8 +14,8 @@
  * @level X.X.
  */
 // Variables
-$base-typography-responsive: true;
-$base-semantic-headline-classes: false;
+$base-typography-responsive: true !default;
+$base-semantic-headline-classes: false !default;
 
 
 
@@ -138,7 +138,7 @@ h6 {
 
 
 /**
- * Anchors
+ * Anchor
  *
  * @level X.X.X.
  * @markup
@@ -225,6 +225,7 @@ blockquote {
 * + ul,
 * + ol,
 * + dl,
+* + img,
 * + pre,
 * + form,
 * + table,
@@ -265,4 +266,9 @@ strong {
 
 small {
   font-size: $font-size-s;
+}
+
+// Better img behaviour
+img {
+  display: inline-block;
 }
