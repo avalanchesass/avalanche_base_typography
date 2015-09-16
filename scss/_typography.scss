@@ -14,8 +14,9 @@
  * @level X.X.
  */
 // Variables
-$base-typography-responsive: true !default;
+$base-typography-responsive:   true !default;
 $base-semantic-headline-class: false !default;
+$base-semantic-anchor-class:   false !default;
 
 
 
@@ -143,11 +144,9 @@ h6 {
  * @level X.X.X.
  * @markup
  * <a href="#">readmore...</a>
- * <span class="a">readmore...</span>
- * <a href="#" class="a a--rev">reversed hover behaviour</a>
+ * <a href="#" class="a-rev">reversed hover behaviour</a>
  */
-a,
-.a {
+a {
   color: $a-color;
   text-decoration: $a-text-decoration;
   cursor: pointer;
@@ -166,6 +165,23 @@ a,
   &:hover,
   &:focus {
     text-decoration: $a-text-decoration;
+  }
+}
+
+
+
+@if $base-semantic-anchor-class {
+  /**
+   * Semantic anchor class
+   *
+   * .a class can be used to create a fake link inside of a block link.
+   *
+   * @level X.X.X.X.
+   * @markup
+   * <span class="a">readmore...</span>
+   */
+  .a {
+    @extend a;
   }
 }
 
