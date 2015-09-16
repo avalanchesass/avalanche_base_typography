@@ -15,7 +15,7 @@
  */
 // Variables
 $base-typography-responsive: true !default;
-$base-semantic-headline-classes: false !default;
+$base-semantic-headline-class: false !default;
 
 
 
@@ -96,7 +96,7 @@ h6 {
 
 
 
-@if $base-semantic-headline-classes {
+@if $base-semantic-headline-class {
   /**
    * Semantic headline classes
    *
