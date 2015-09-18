@@ -57,42 +57,71 @@ textarea {
  * <h5>Headline 5</h5>
  * <h6>Headline 6</h6>
  */
-h1,
-h2,
-h3,
-h4 {
+%main-headline {
   color: $cs-a;
   font-weight: $font-b-weight-bold;
   font-family: $font-b-family;
   line-height: 1.35;
 }
 
-h1 {
+%sub-headline {
+  font-family: $font-a-family;
+}
+
+%h1 {
   font-size: $font-size-h1;
+  @extend %main-headline;
+}
+
+%h2 {
+  font-size: $font-size-h2;
+  @extend %main-headline;
+}
+
+%h3 {
+  font-size: $font-size-h3;
+  @extend %main-headline;
+}
+
+%h4 {
+  font-size: $font-size-h4;
+  @extend %main-headline;
+}
+
+%h5 {
+  font-weight: $font-a-weight-bold;
+  font-size: $font-size-h5;
+  @extend %sub-headline;
+}
+
+%h6 {
+  font-weight: $font-a-weight-normal;
+  font-size: $font-size-h6;
+  @extend %sub-headline;
+}
+
+h1 {
+  @extend %h1;
 }
 
 h2 {
-  font-size: $font-size-h2;
+  @extend %h2;
 }
 
 h3 {
-  font-size: $font-size-h3;
+  @extend %h3;
 }
 
 h4 {
-  font-size: $font-size-h4;
+  @extend %h4;
 }
 
 h5 {
-  font-weight: $font-a-weight-bold;
-  font-size: $font-size-h5;
-  font-family: $font-a-family;
+  @extend %h5;
 }
 
 h6 {
-  font-weight: $font-a-weight-normal;
-  font-size: $font-size-h6;
-  font-family: $font-a-family;
+  @extend %h6;
 }
 
 
@@ -112,22 +141,27 @@ h6 {
    * <h5 class="h6">h5 looking like h6</h1>
    */
   .h1 {
-    @extend h1;
+    @extend %h1;
   }
+
   .h2 {
-    @extend h2;
+    @extend %h2;
   }
+
   .h3 {
-    @extend h3;
+    @extend %h3;
   }
+
   .h4 {
-    @extend h4;
+    @extend %h4;
   }
+
   .h5 {
-    @extend h5;
+    @extend %h5;
   }
+
   .h6 {
-    @extend h6;
+    @extend %h6;
   }
 }
 
@@ -141,7 +175,7 @@ h6 {
  * <a href="#">readmore...</a>
  * <a href="#" class="a-rev">reversed hover behaviour</a>
  */
-a {
+%a {
   color: $a-color;
   text-decoration: $a-text-decoration;
   cursor: pointer;
@@ -153,6 +187,10 @@ a {
     color: $a-color-hover;
     text-decoration: $a-text-decoration-hover;
   }
+}
+
+a {
+  @extend %a;
 }
 
 .a-rev {
@@ -176,7 +214,7 @@ a {
    * <span class="a">readmore...</span>
    */
   .a {
-    @extend a;
+    @extend %a;
   }
 }
 
