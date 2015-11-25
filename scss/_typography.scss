@@ -270,6 +270,12 @@ blockquote {
   margin-top: 1em;
 }
 
+%default-whitespace {
+  * + & {
+    margin-top: $spacing-m;
+  }
+}
+
 * + p,
 * + ul,
 * + ol,
@@ -282,7 +288,7 @@ blockquote {
 * + address,
 * + fieldset,
 * + blockquote {
-  margin-top: $spacing-m;
+  @extend %default-whitespace;
 }
 
 ul,
