@@ -1,6 +1,7 @@
 /* extract base_typography.css */
 /*---
 title:   Typography
+name:    base_typography
 section: Base
 ---
 
@@ -59,7 +60,8 @@ html {
 
 /*---
 title:   Headline
-section: Typography
+name:    base_typography_headline
+section: base_typography
 ---
 
 ```example:html
@@ -179,7 +181,8 @@ h6 {
 @if $base-typography-semantic-headline-class {
   /*---
   title:   Semantic headline classes
-  section: Typography
+  name:    base_typography_semantic_headline_classes
+  section: base_typography
   ---
 
   .h1-.h6 classes should be used to maintain the semantically appropriate
@@ -248,7 +251,8 @@ h6 {
 
 /*---
 title:   Anchor
-section: Typography
+name:    base_typography_anchor
+section: base_typography
 ---
 
 ```example:html
@@ -277,7 +281,8 @@ a {
 @if $base-typography-semantic-anchor-class {
   /*---
   title:   Semantic anchor class
-  section: Typography
+  name:    base_typography_semantic_anchor_class
+  section: base_typography
   ---
 
   .a class can be used to create a fake link inside of a block link.
@@ -295,7 +300,8 @@ a {
 
 /*---
 title:   Whitespace
-section: Typography
+name:    base_typography_whitespace
+section: base_typography
 ---
 
 ```example:html
