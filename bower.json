@@ -1,25 +1,21 @@
 {
-  "name": "avalanche: Base typography",
-  "version": "2.1.3",
-  "homepage": "https://github.com/avalanchesass/avalanche_base_typography",
+  "name": "avalanche_base_typography",
+  "description": "Basic typography",
+  "version": "3.0.0",
   "authors": [
     "Markus Oberlehner"
   ],
-  "description": "Basic typography",
-  "keywords": [
-    "SASS",
-    "CSS"
-  ],
+  "homepage": "https://github.com/avalanchesass/avalanche_base_typography",
   "license": "GPL v2",
+  "dependencies": {
+    "avalanche_function_strip_unit": "avalanchesass/avalanche_function_strip_unit#dev-3.0.0"
+  },
+  "main": "scss/_typography.scss",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "avalanche_function_strip_unit": "^2.0.0",
-    "avalanche_system_variable": "^2.0.0"
-  }
+  ]
 }
