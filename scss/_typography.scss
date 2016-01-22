@@ -39,7 +39,7 @@ input,
 select,
 textarea {
   color: $font-base-color;
-  font-family: $font-a-family;
+  font-family: map-get-deep($fonts, a, family);
 }
 
 /**
@@ -75,13 +75,13 @@ section: base_typography
 ```
 */
 %main-headline {
-  font-weight: map-get($font-b-weights, bold);
-  font-family: $font-b-family;
+  font-weight: map-get-deep($fonts, b, weights, bold);
+  font-family: map-get-deep($fonts, b, family);
   line-height: 1.25;
 }
 
 %sub-headline {
-  font-family: $font-a-family;
+  font-family: map-get-deep($fonts, a, family);
   line-height: inherit;
 }
 
@@ -143,13 +143,13 @@ section: base_typography
 
 %h5 {
   @extend %sub-headline;
-  font-weight: map-get($font-a-weights, bold);
+  font-weight: map-get-deep($fonts, a, weights, bold);
   font-size: map-get($font-sizes, h5);
 }
 
 %h6 {
   @extend %sub-headline;
-  font-weight: map-get($font-a-weights, normal);
+  font-weight: map-get-deep($fonts, a, weights, normal);
   font-size: map-get($font-sizes, h6);
 }
 
@@ -402,7 +402,7 @@ table {
 // Normalize default font related tags
 b,
 strong {
-  font-weight: map-get($font-a-weights, bold);
+  font-weight: map-get-deep($fonts, a, weights, bold);
 }
 
 small {
