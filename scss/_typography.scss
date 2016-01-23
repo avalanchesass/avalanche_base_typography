@@ -39,7 +39,7 @@ input,
 select,
 textarea {
   color: $font-base-color;
-  font-family: map-get-deep($fonts, a, family);
+  font-family: unquote(map-get-deep($fonts, a, family));
 }
 
 /**
@@ -76,12 +76,12 @@ section: base_typography
 */
 %main-headline {
   font-weight: map-get-deep($fonts, b, weights, bold);
-  font-family: map-get-deep($fonts, b, family);
+  font-family: unquote(map-get-deep($fonts, b, family));
   line-height: 1.25;
 }
 
 %sub-headline {
-  font-family: map-get-deep($fonts, a, family);
+  font-family: unquote(map-get-deep($fonts, a, family));
   line-height: inherit;
 }
 
