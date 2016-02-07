@@ -1,4 +1,4 @@
-# avalanche_base_typography
+# avalanchesass_base_typography
 Basic typography  
 https://github.com/avalanchesass/avalanche_base_typography
 
