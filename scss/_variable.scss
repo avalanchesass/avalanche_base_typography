@@ -1,0 +1,13 @@
+// Responsive typography.
+$base-typography-responsive:          true !default;
+$base-typography-responsive-headline: false !default;
+
+// Semantic classes.
+$base-typography-semantic-headline-class: false !default;
+$base-typography-semantic-anchor-class:   false !default;
+
+// Anchor.
+$base-typography-a-color:                 map-get($cs, a) !default;
+$base-typography-a-color-visited:         $base-typography-a-color !default;
+$base-typography-a-text-decoration:       none !default;
+$base-typography-a-text-decoration-hover: underline !default;

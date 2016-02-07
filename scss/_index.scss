@@ -1,3 +1,8 @@
+@import 'avalanche_function_map_get_deep';
+@import 'avalanche_function_strip_unit';
+@import 'avalanche_base_typography/variable';
+@import 'avalanche_base_typography/mixin';
+
 /* extract base_typography.css */
 /*---
 title:   Typography
@@ -14,25 +19,6 @@ are allowed.
 Pixel (px) values are only allowed for hairline borders - this is because
 there is no other reliable way to display 1px wide lines with relative units.
 */
-/**
- * Variables
- */
-// Responsive typography.
-$base-typography-responsive:          true !default;
-$base-typography-responsive-headline: false !default;
-
-// Semantic classes.
-$base-typography-semantic-headline-class: false !default;
-$base-typography-semantic-anchor-class:   false !default;
-
-// Anchor.
-$base-typography-a-color:                 map-get($cs, a) !default;
-$base-typography-a-color-visited:         $base-typography-a-color !default;
-$base-typography-a-text-decoration:       none !default;
-$base-typography-a-text-decoration-hover: underline !default;
-
-
-
 html,
 button,
 input,
@@ -351,9 +337,7 @@ blockquote {
 }
 
 %base-typography-whitespace {
-  * + & {
-    margin-top: map-get($spacing, m);
-  }
+  @include base-typography-whitespace();
 }
 
 * + p,

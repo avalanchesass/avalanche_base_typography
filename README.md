@@ -2,6 +2,7 @@
 Basic typography  
 https://github.com/avalanchesass/avalanche_base_typography
 
+## About
 ### Author
 Markus Oberlehner  
 Twitter: https://twitter.com/MaOberlehner
