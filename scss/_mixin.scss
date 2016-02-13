@@ -10,11 +10,6 @@ sort:    2
 ```css
 base-typography-whitespace()
 ```
-```css
-.bar {
-  @include base-typography-whitespace();
-}
-```
 */
 @mixin base-typography-whitespace() {
   * + & {
