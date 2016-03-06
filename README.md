@@ -1,6 +1,19 @@
 # avalanchesass_base_typography
-Basic typography  
-https://github.com/avalanchesass/avalanche_base_typography
+Basic typography.
+
+## Install
+```
+npm install avalanchesass_base_typography --save
+```
+
+## Basic usage
+```css
+/* Import the main file. */
+@import 'avalanchesass_base_typography';
+
+/* Import just the mixin file. */
+@import 'avalanchesass_base_typography/mixin';
+```
 
 ## About
 ### Author

@@ -1,8 +1,6 @@
 @import 'avalanchesass_base_typography/style_guide';
-
 @import 'avalanchesass_function_map_get_deep';
 @import 'avalanchesass_function_strip_unit';
-
 @import 'avalanchesass_base_typography/variable';
 @import 'avalanchesass_base_typography/mixin';
 
@@ -39,195 +37,20 @@ html {
   }
 }
 
-
-
-/*---
-title:   Headline
-name:    base_typography_example_headline
-section: base_typography_example
----
-
-```example:html
-<h1>Headline 1</h1>
-<h2>Headline 2</h2>
-<h3>Headline 3</h3>
-<h4>Headline 4</h4>
-<h5>Headline 5</h5>
-<h6>Headline 6</h6>
-```
-*/
-%main-headline {
-  font-weight: map-get-deep($fonts, b, weights, bold);
-  font-family: unquote(map-get-deep($fonts, b, family));
-  line-height: 1.25;
-}
-
-%sub-headline {
-  font-family: unquote(map-get-deep($fonts, a, family));
-  line-height: inherit;
-}
-
-%h1 {
-  @extend %main-headline;
-  @if $base-typography-responsive-headline {
-    text-transform: uppercase;
-    font-size: map-get($font-sizes, xl);
-    @media (min-width: map-get($breakpoints, s)) {
-      text-transform: none;
-      font-size: map-get($font-sizes, h1);
-    }
-  } @else {
-    font-size: map-get($font-sizes, h1);
-  }
-}
-
-%h2 {
-  @extend %main-headline;
-  @if $base-typography-responsive-headline {
-    text-transform: uppercase;
-    font-size: map-get($font-sizes, l);
-    @media (min-width: map-get($breakpoints, s)) {
-      text-transform: none;
-      font-size: map-get($font-sizes, h2);
-    }
-  } @else {
-    font-size: map-get($font-sizes, h2);
-  }
-}
-
-%h3 {
-  @extend %main-headline;
-  @if $base-typography-responsive-headline {
-    font-variant: small-caps;
-    font-size: map-get($font-sizes, l);
-    @media (min-width: map-get($breakpoints, s)) {
-      font-variant: normal;
-      font-size: map-get($font-sizes, h3);
-    }
-  } @else {
-    font-size: map-get($font-sizes, h3);
-  }
-}
-
-%h4 {
-  @extend %main-headline;
-  @if $base-typography-responsive-headline {
-    font-style: italic;
-    font-size: map-get($font-sizes, l);
-    @media (min-width: map-get($breakpoints, s)) {
-      font-style: normal;
-      font-size: map-get($font-sizes, h4);
-    }
-  } @else {
-    font-size: map-get($font-sizes, h4);
-  }
-}
-
-%h5 {
-  @extend %sub-headline;
-  font-weight: map-get-deep($fonts, a, weights, bold);
-  font-size: map-get($font-sizes, h5);
-}
-
-%h6 {
-  @extend %sub-headline;
-  font-weight: map-get-deep($fonts, a, weights, normal);
-  font-size: map-get($font-sizes, h6);
-}
-
-h1 {
-  @extend %h1;
-}
-
-h2 {
-  @extend %h2;
-}
-
-h3 {
-  @extend %h3;
-}
-
+/**
+ * Set only very basic heading styles, more about styling headlines:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/
+ */
+h1,
+h2,
+h3,
 h4 {
-  @extend %h4;
+  font-size: map-get($font-sizes, l);
 }
 
-h5 {
-  @extend %h5;
-}
-
+h5,
 h6 {
-  @extend %h6;
-}
-
-
-
-@if $base-typography-semantic-headline-class {
-  /*---
-  title:   Semantic headline classes
-  name:    base_typography_example_semantic_headline_classes
-  section: base_typography_example
-  ---
-
-  .h1-.h6 classes should be used to maintain the semantically appropriate
-  heading levels - NOT for use on non-headings.
-
-```example:html
-<h1 class="h2">h1 looking like h2</h1>
-<h2 class="h3">h2 looking like h3</h2>
-<h3 class="h4">h3 looking like h4</h3>
-<h4 class="h5">h4 looking like h5</h4>
-<h5 class="h6">h5 looking like h6</h5>
-```
-  */
-  .h1 {
-    @extend %h1;
-    @if $base-typography-responsive-headline {
-      font-style: normal;
-      font-variant: normal;
-    }
-  }
-
-  .h2 {
-    @extend %h2;
-    @if $base-typography-responsive-headline {
-      font-style: normal;
-      font-variant: normal;
-    }
-  }
-
-  .h3 {
-    @extend %h3;
-    @if $base-typography-responsive-headline {
-      text-transform: none;
-      font-style: normal;
-    }
-  }
-
-  .h4 {
-    @extend %h4;
-    @if $base-typography-responsive-headline {
-      text-transform: none;
-      font-variant: normal;
-    }
-  }
-
-  .h5 {
-    @extend %h5;
-    @if $base-typography-responsive-headline {
-      text-transform: none;
-      font-style: normal;
-      font-variant: normal;
-    }
-  }
-
-  .h6 {
-    @extend %h6;
-    @if $base-typography-responsive-headline {
-      text-transform: none;
-      font-style: normal;
-      font-variant: normal;
-    }
-  }
+  font-size: 1em;
 }
 
 
@@ -242,7 +65,7 @@ section: base_typography_example
 <a href="#">readmore...</a>
 ```
 */
-%a {
+a {
   color: $base-typography-a-color;
   text-decoration: $base-typography-a-text-decoration;
   cursor: pointer;
@@ -252,30 +75,6 @@ section: base_typography_example
   &:hover,
   &:focus {
     text-decoration: $base-typography-a-text-decoration-hover;
-  }
-}
-
-a {
-  @extend %a;
-}
-
-
-
-@if $base-typography-semantic-anchor-class {
-  /*---
-  title:   Semantic anchor class
-  name:    base_typography_example_semantic_anchor_class
-  section: base_typography_example
-  ---
-
-  .a class can be used to create a fake link inside of a block link.
-
-```example:html
-<span class="a">readmore...</span>
-```
-  */
-  .a {
-    @extend %a;
   }
 }
 

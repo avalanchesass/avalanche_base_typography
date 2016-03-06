@@ -1,12 +1,7 @@
 @import 'avalanchesass_base_typography/style_guide';
 
 // Responsive typography.
-$base-typography-responsive:          true !default;
-$base-typography-responsive-headline: false !default;
-
-// Semantic classes.
-$base-typography-semantic-headline-class: false !default;
-$base-typography-semantic-anchor-class:   false !default;
+$base-typography-responsive: true !default;
 
 // Anchor.
 $base-typography-a-color:                 map-get($cs, a) !default;
@@ -22,9 +17,6 @@ order:   3
 
 ```css
 $base-typography-responsive: #{$base-typography-responsive};
-$base-typography-responsive-headline: #{$base-typography-responsive-headline};
-$base-typography-semantic-headline-class: #{$base-typography-semantic-headline-class};
-$base-typography-semantic-anchor-class: #{$base-typography-semantic-anchor-class};
 $base-typography-a-color: #{$base-typography-a-color};
 $base-typography-a-color-visited: #{$base-typography-a-color-visited};
 $base-typography-a-text-decoration: #{$base-typography-a-text-decoration};
