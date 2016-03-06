@@ -1,0 +1,18 @@
+@import 'avalanchesass_base_typography/style_guide';
+
+/*---
+title:   Mixin
+name:    base_typography_mixin
+section: base_typography
+order:   2
+---
+
+```css
+base-typography-whitespace()
+```
+*/
+@mixin base-typography-whitespace() {
+  * + & {
+    margin-top: map-get($spacing, m);
+  }
+}
