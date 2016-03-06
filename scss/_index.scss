@@ -1,0 +1,196 @@
+@import 'avalanchesass_base_typography/style_guide';
+@import 'avalanchesass_function_map_get_deep';
+@import 'avalanchesass_function_strip_unit';
+@import 'avalanchesass_base_typography/variable';
+@import 'avalanchesass_base_typography/mixin';
+
+/* extract base.css */
+/* extract base_typography.css */
+/*---
+title:   Example
+name:    base_typography_example
+section: base_typography
+order:   1
+---
+*/
+html,
+button,
+input,
+select,
+textarea {
+  color: $font-base-color;
+  font-family: unquote(map-get-deep($fonts, a, family));
+}
+
+/**
+ * Basic font styles.
+ */
+html {
+  line-height: strip-unit($font-base-line-height / $font-base-size);
+  @if $base-typography-responsive {
+    font-size: strip-unit($font-base-size) / (16 / 87.5) * 1%;
+    @media (min-width: map-get($breakpoints, s)) {
+      font-size: strip-unit($font-base-size) / (16 / 100) * 1%;
+    }
+  } @else {
+    font-size: strip-unit($font-base-size) / (16 / 100) * 1%;
+  }
+}
+
+/**
+ * Set only very basic heading styles, more about styling headlines:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/
+ */
+h1,
+h2,
+h3,
+h4 {
+  font-size: map-get($font-sizes, l);
+}
+
+h5,
+h6 {
+  font-size: 1em;
+}
+
+
+
+/*---
+title:   Anchor
+name:    base_typography_example_anchor
+section: base_typography_example
+---
+
+```example:html
+<a href="#">readmore...</a>
+```
+*/
+a {
+  color: $base-typography-a-color;
+  text-decoration: $base-typography-a-text-decoration;
+  cursor: pointer;
+  &:visited {
+    color: $base-typography-a-color-visited;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: $base-typography-a-text-decoration-hover;
+  }
+}
+
+
+
+/*---
+title:   Whitespace
+name:    base_typography_example_whitespace
+section: base_typography_example
+---
+
+```example:html
+<h1>Lorem Ipsum dolor</h1>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua.</p>
+<ul>
+  <li>Lorem Ipsum dolor</li>
+  <li>Consetetur sadipscing elitr</li>
+</ul>
+<h2>Lorem Ipsum</h2>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua.</p>
+<h3>Lorem Ipsum</h3>
+<p>Consetetur sadipscing elitr, sed diam nonumy eirmod labore et dolore magna
+aliquyam erat tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua.</p>
+```
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6,
+p,
+ul,
+ol,
+dl,
+pre,
+form,
+table,
+figure,
+address,
+fieldset,
+blockquote {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+%base-typography-whitespace {
+  @include base-typography-whitespace();
+}
+
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + img,
+* + pre,
+* + form,
+* + table,
+* + figure,
+* + address,
+* + fieldset,
+* + blockquote,
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  @extend %base-typography-whitespace;
+}
+
+ul,
+ol,
+dl {
+  padding-left: map-get($spacing, m);
+}
+
+// No margin top for nested lists
+li {
+  ul,
+  ol,
+  dl {
+    margin-top: 0;
+  }
+}
+
+// No margin top for nested tables
+table {
+  table {
+    margin-top: 0;
+  }
+}
+
+// Normalize default font related tags
+b,
+strong {
+  font-weight: map-get-deep($fonts, a, weights, bold);
+}
+
+small {
+  font-size: map-get($font-sizes, s);
+}
+
+// Better img behaviour
+img {
+  display: inline-block;
+}
+/* end extract base_typography.css */
+/* end extract base.css */

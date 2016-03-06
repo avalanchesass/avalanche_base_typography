@@ -1,0 +1,25 @@
+@import 'avalanchesass_base_typography/style_guide';
+
+// Responsive typography.
+$base-typography-responsive: true !default;
+
+// Anchor.
+$base-typography-a-color:                 map-get($cs, a) !default;
+$base-typography-a-color-visited:         $base-typography-a-color !default;
+$base-typography-a-text-decoration:       none !default;
+$base-typography-a-text-decoration-hover: underline !default;
+/*---
+title:   Variable
+name:    base_typography_variable
+section: base_typography
+order:   3
+---
+
+```css
+$base-typography-responsive: #{$base-typography-responsive};
+$base-typography-a-color: #{$base-typography-a-color};
+$base-typography-a-color-visited: #{$base-typography-a-color-visited};
+$base-typography-a-text-decoration: #{$base-typography-a-text-decoration};
+$base-typography-a-text-decoration-hover: #{$base-typography-a-text-decoration-hover};
+```
+*/
