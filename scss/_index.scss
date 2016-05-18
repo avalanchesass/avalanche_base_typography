@@ -159,7 +159,8 @@ blockquote {
 ul,
 ol,
 dl {
-  padding-left: map-get($spacing, m);
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 /**
