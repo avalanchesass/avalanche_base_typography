@@ -135,24 +135,24 @@ blockquote {
   @include base-typography-whitespace();
 }
 
-* + p,
-* + ul,
-* + ol,
-* + dl,
-* + img,
-* + pre,
-* + form,
-* + table,
-* + figure,
-* + address,
-* + fieldset,
-* + blockquote,
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6 {
+p,
+ul,
+ol,
+dl,
+img,
+pre,
+form,
+table,
+figure,
+address,
+fieldset,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @extend %base-typography-whitespace;
 }
 
