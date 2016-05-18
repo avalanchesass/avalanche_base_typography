@@ -12,7 +12,7 @@ base-typography-whitespace()
 ```
 */
 @mixin base-typography-whitespace() {
-  * + & {
+  &:not(:first-child) {
     margin-top: map-get($spacing, m);
   }
 }
